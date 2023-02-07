@@ -21945,7 +21945,7 @@ COPY castings (movie_id, actor_id, ord) FROM stdin;
 644	5944	9
 1688	5945	10
 1605	5945	11
-542	5945	9
+542	5945	9`
 \.
 
 COPY countries (name, continent, area, population, gdp) FROM stdin;
