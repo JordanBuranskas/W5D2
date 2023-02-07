@@ -8,6 +8,8 @@
 #  population  :integer
 #  gdp         :integer
 
+
+#chmod tx import_db.sh
 require_relative './sqlzoo.rb'
 
 def example_select #?
@@ -36,7 +38,17 @@ def per_capita_gdp
   # Show the name and per capita gdp (gdp/population) for each country where
   # the area is over 5,000,000 km^2
   execute(<<-SQL)
+
+  SELECT 
+    name, 
+    gdp/POPULATION AS gdp
+  FROM 
+    countries 
+  WHERE 
+    area > 5000000;
+
   SQL
+
 end
 
 def small_and_wealthy
